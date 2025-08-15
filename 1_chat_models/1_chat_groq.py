@@ -1,0 +1,10 @@
+from langchain_groq import ChatGroq
+from dotenv import load_dotenv
+
+load_dotenv()
+llm = ChatGroq(model="llama3-8b-8192")
+
+result = llm.invoke("What is squareroot of 49")
+
+# print(result)
+print(result.content)
